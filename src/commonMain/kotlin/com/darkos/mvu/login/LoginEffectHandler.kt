@@ -15,8 +15,8 @@ abstract class LoginEffectHandler<T : Any, R : Any>(
 ) : EffectHandler {
 
     abstract suspend fun processLoginResult(result: R)
-    abstract fun processError(error: Exception): Message
-    abstract fun processSuccess(): Message
+    abstract suspend fun processError(error: Exception): Message
+    abstract suspend fun processSuccess(): Message
 
     override suspend fun call(effect: Effect): Message {
         return when (effect) {
