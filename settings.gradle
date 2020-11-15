@@ -1,4 +1,4 @@
-rootProject.name = 'validation'
+rootProject.name = 'login-effect-handler'
 
 
 enableFeaturePreview('GRADLE_METADATA')
