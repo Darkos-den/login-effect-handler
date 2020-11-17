@@ -13,18 +13,20 @@ repositories {
     jcenter()
     mavenCentral()
     maven{ url "https://dl.bintray.com/darkosinc/MVU" }
+    maven{ url "https://dl.bintray.com/darkosinc/validation" }
+    maven{ url "https://dl.bintray.com/darkosinc/login" }
 }
 
-def GROUP_ID="com.darkosinc.mvu"
-def ARTIFACT_ID="login-effect-handler"
+def GROUP_ID="com.darkosinc.login"
+def ARTIFACT_ID="effect-handler"
 
-def BINTRAY_REPOSITORY="MVU"
+def BINTRAY_REPOSITORY="login"
 def BINTRAY_ORGINIZATION="darkosinc"
 
 def ISSUE_URL=""
 def SITE_URL=""
 def VCS_URL=""
-def LIBRARY_VERSION_NAME="1.1.0"
+def LIBRARY_VERSION_NAME="1.0.0"
 
 group GROUP_ID
 version LIBRARY_VERSION_NAME
@@ -38,9 +40,9 @@ kotlin {
             dependencies {
                 implementation kotlin('stdlib-common')
                 implementation("com.darkosinc.mvu:core:1.1.0")
-                implementation("com.darkosinc.mvu:login-api:1.1.0")
+                implementation("com.darkosinc.login:api:1.0.0")
 
-                implementation("com.darkosinc.mvu:validation-api:1.1.0")
+                implementation("com.darkosinc.validation:api:1.0.0")
             }
         }
         commonTest {
@@ -53,9 +55,9 @@ kotlin {
             dependencies {
                 implementation kotlin('stdlib-jdk8')
                 implementation("com.darkosinc.mvu:core-jvm:1.1.0")
-                implementation("com.darkosinc.mvu:login-api-jvm:1.1.0")
+                implementation("com.darkosinc.login:api-jvm:1.0.0")
 
-                implementation("com.darkosinc.mvu:validation-api-jvm:1.1.0")
+                implementation("com.darkosinc.validation:api-jvm:1.0.0")
             }
         }
         jvmTest {
